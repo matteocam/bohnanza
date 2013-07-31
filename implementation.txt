@@ -8,4 +8,27 @@ One of the most interesting issues in Bohnanza is the order of planting/selling 
 Trading and negotiation
 ----------------------------------
 In a real card Bohnanza game, trading works by offers of players that can be changed or withdrawn in real time also according to offers of other players.
-An offer is a basic unit in a trading session
+An offer is a basic unit in a trading session.
+
+Offer := [OfferUnit]
+OfferUnit := Gift [Card] | Trade [Card] [Card]
+
+This definition of OfferUnit is wrong because Trade usually requires a form of dynamic negotiation.
+
+
+Phases of the game
+-------------------
+
+data Deck = ...
+drawFromDeck :: Deck -> Card
+
+data Player  = Player (cards :: [Card]) (coins :: Int) (fields :: Fields)
+
+data Step = ...
+isStepLegal :: Player -> Step -> Boolean
+
+
+Logging
+---------
+One may want to introduce a Logging Monad and "record" the game
+
