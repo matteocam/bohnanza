@@ -1,0 +1,11 @@
+Details of implementation
+=====================
+
+Steps
+----------
+One of the most interesting issues in Bohnanza is the order of planting/selling and stuff. Often order is important. A solution for this would be to introduce the concept of Step. A Step is an atomic  "operation" carried out by a player during his turn.
+
+Trading and negotiation
+----------------------------------
+In a real card Bohnanza game, trading works by offers of players that can be changed or withdrawn in real time also according to offers of other players.
+An offer is a basic unit in a trading session
